@@ -26,9 +26,11 @@ jobs:
           docker.ketches.cn
           docker.m.daocloud.io
           docker.1ms.run
+          docker.1panel.live
           docker.io
           docker.fxxk.dedyn.io
           dockerproxy.com
+          hub.1panel.dev
           hub.iyuu.cn
           hub-mirror.c.163.com
           hub.atomgit.com
