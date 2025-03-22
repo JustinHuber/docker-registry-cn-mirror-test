@@ -22,8 +22,8 @@ jobs:
       - name: Test
         run: |
           registrys="
-          cjie.eu.org
           cf-workers-docker-io-2cl.pages.dev
+          dockerproxy.nasspace.us.kg
           dockerhub.timeweb.cloud
           docker.ketches.cn
           docker.m.daocloud.io
@@ -34,13 +34,11 @@ jobs:
           dockerproxy.com
           hub.1panel.dev
           hub.iyuu.cn
-          hub-mirror.c.163.com
           hub.atomgit.com
           hub.docker.com
           registry.docker.com
           registry-1.docker.io
           mirror.gcr.io
-          $ALIYUN_MIRROR
           "
           image="library/nginx:1.27.2-alpine"
 
