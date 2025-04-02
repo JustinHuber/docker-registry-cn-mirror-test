@@ -41,19 +41,34 @@ jobs:
           mirror.gcr.io
           "
           image="library/nginx:1.27.2-alpine"
+          
+          # 创建临时文件存储有效registry
+          valid_registries_file=$(mktemp)
 
           for registry in $registrys
           do
              echo ::group::Test $registry/$image
-             docker pull $registry/$image \
-               && (echo -e "\033[32m$registry is good\033[0m" \
-                  ; echo "::warning file=README.md,line=1,col=0::OK [ $registry ] is good") \
-               || (echo -e "\033[31m$registry is outdated\033[0m" \
-                  ; echo "::error file=README.md,line=1,col=0::X [ $registry ] is outdated")
+             if docker pull $registry/$image; then
+                echo -e "\033[32m$registry is good\033[0m"
+                echo "::warning file=README.md,line=1,col=0::OK [ $registry ] is good"
+                # 将有效registry写入文件
+                echo "$registry" >> "$valid_registries_file"
+             else
+                echo -e "\033[31m$registry is outdated\033[0m"
+                echo "::error file=README.md,line=1,col=0::X [ $registry ] is outdated"
+             fi
              docker rmi $registry/$image || true
              echo ::endgroup::
           done
           
+          # 更新registrys列表为仅包含有效的registry
+          registrys=$(cat "$valid_registries_file")
+          rm "$valid_registries_file"
+          
+          # 输出更新后的有效registry列表
+          echo "::group::有效Registry列表"
+          echo "$registrys"
+          echo "::endgroup::"
           IMAGE=busybox
           MIRROR=https://dockerhub.icu
           NUM_TRIALS=5
