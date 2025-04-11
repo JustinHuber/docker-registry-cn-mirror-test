@@ -23,7 +23,6 @@ jobs:
         run: |
           registrys="
           cf-workers-docker-io-2cl.pages.dev
-          dockerproxy.nasspace.us.kg
           dockerhub.timeweb.cloud
           docker.ketches.cn
           docker.m.daocloud.io
@@ -32,6 +31,7 @@ jobs:
           docker.io
           docker.fxxk.dedyn.io
           dockerproxy.com
+          kubesre.xyz
           hub.1panel.dev
           hub.iyuu.cn
           hub.atomgit.com
