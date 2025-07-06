@@ -24,11 +24,11 @@ jobs:
           docker.ketches.cn
           docker.m.daocloud.io
           docker.1ms.run
-          docker.1panel.live
           docker.io
           docker.fxxk.dedyn.io
           dockerproxy.com
           kubesre.xyz
+          hub.rat.dev
           hub.1panel.dev
           hub.iyuu.cn
           hub.atomgit.com
@@ -37,7 +37,7 @@ jobs:
           registry-1.docker.io
           mirror.gcr.io
           "
-          image="library/nginx:1.27.2-alpine"
+          image="library/nginx:latest"
           
           # 创建临时文件存储有效registry
           valid_registries_file=$(mktemp)
