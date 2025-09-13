@@ -19,19 +19,14 @@ jobs:
       - name: Test
         run: |
           registrys="
-          cf-workers-docker-io-2cl.pages.dev
           dockerhub.timeweb.cloud
           docker.ketches.cn
           docker.m.daocloud.io
           docker.1ms.run
           docker.io
-          docker.fxxk.dedyn.io
-          dockerproxy.com
-          kubesre.xyz
+          dockerproxy.net
           hub.rat.dev
           hub.1panel.dev
-          hub.iyuu.cn
-          hub.atomgit.com
           hub.docker.com
           registry.docker.com
           registry-1.docker.io
