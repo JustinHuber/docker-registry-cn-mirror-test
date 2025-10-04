@@ -22,7 +22,8 @@ jobs:
           dockerhub.timeweb.cloud
           docker.ketches.cn
           docker.m.daocloud.io
-          docker.1ms.run
+          # docker.1ms.run
+          docker.lin8177.icu
           docker.io
           dockerproxy.net
           hub.rat.dev
