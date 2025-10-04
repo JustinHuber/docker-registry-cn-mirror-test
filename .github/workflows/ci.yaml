@@ -22,8 +22,6 @@ jobs:
           dockerhub.timeweb.cloud
           docker.ketches.cn
           docker.m.daocloud.io
-          # docker.1ms.run
-          docker.lin8177.icu
           docker.io
           dockerproxy.net
           hub.rat.dev
@@ -33,7 +31,7 @@ jobs:
           registry-1.docker.io
           mirror.gcr.io
           "
-          image="library/nginx:latest"
+          image="nginx:latest"
           
           # 创建临时文件存储有效registry
           valid_registries_file=$(mktemp)
